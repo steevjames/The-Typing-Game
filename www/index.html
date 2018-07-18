@@ -30,7 +30,7 @@ outline:none;
 
 
 
-.buttong {
+.buttonhighscore {
 	box-shadow: 0px 1px 0px 0px #00090a;
 	background:linear-gradient(to bottom, #0a0 5%, #050 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb0000', endColorstr='#6b002b',GradientType=0);
@@ -41,7 +41,7 @@ outline:none;
 	font-family:georgia;
 	font-size:15px;
     text-decoration: none;    min-width: 80%;margin-top:20px;padding:15px;position:relative;
-	animation: radius 2s infinite;
+	animation: highscore 2s infinite;
 }
 
 
@@ -59,7 +59,7 @@ text-align:center;
 animation:colors 5s infinite;
 margin:0;
 }
-#divv{
+#maindiv{
 padding:30px;padding-top:15px;text-align:center;background-color:rgba(0,10,50,.2);border-radius:20px;margin-right:5%;margin-left:5%;margin-top:2%;margin-bottom:2%;min-height:96%;
 overlow:scroll;border:0px solid black;
 }
@@ -74,7 +74,7 @@ overlow:scroll;border:0px solid black;
 100% {background-color:#fee;}
 }
 
-@keyframes radius{
+@keyframes highscore{
 0% { padding-right:1%;}
 50% {padding-left:1%;}
 100% {padding-right:1%;}
@@ -104,13 +104,13 @@ history.pushState(null, null, location.href);
 
 </head>
 <body>
-<div id="divv">
+<div id="maindiv">
 <img src="img/1.png" width="100%"><br>
 <hr style="border: none;height: 5px;color: #333; background-color: #333;"><br><br>
 <a href="game.html"><button class="button">NEW GAME</button></a><br>
 <a href="about.html"><button class="button">ABOUT</button></a>
 <br>
-<button class="buttong">HIGHSCORE : <span id="hs"> </span></button>
+<button class="buttonhighscore">HIGHSCORE : <span id="hs"> </span></button>
 <br><input type="Button" onclick="navigator.app.exitApp();" value='EXIT' class="button">
 <br><br><br>
 
