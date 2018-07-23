@@ -9,14 +9,13 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>The Typing Game</title>
 <style>
 
 button{
 outline:none;
 }
-.button {
+.button2 {
 
 	box-shadow: 0px 1px 0px 0px #00090a;
 	background-color:#eb0000;
@@ -30,7 +29,7 @@ outline:none;
 
 
 
-.buttonhighscore {
+.buttonhighscore2 {
 	box-shadow: 0px 1px 0px 0px #00090a;
 	background:linear-gradient(to bottom, #0a0 5%, #050 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb0000', endColorstr='#6b002b',GradientType=0);
@@ -81,6 +80,53 @@ overlow:scroll;border:0px solid black;
 }
 
 
+.button {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        position:relative;
+        font-size: 17px;
+        margin-top:20px;
+        padding: 9px 20px;
+        min-width: 80%;
+        border-radius: 10px;
+        color: white;
+        text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+        border: 5px solid transparent;
+        border-bottom-color: rgba(0,0,0,0.35);
+        background: #e00;
+        cursor: pointer;
+        outline: 0 !important;
+        transition: background 0.4s, border 0.2s, margin 0.2s;
+    }
+
+.buttonhighscore {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        position:relative;
+        font-size: 17px;
+        margin-top:20px;
+        padding: 9px 20px;
+        min-width: 80%;
+        border-radius: 10px;
+        color: white;
+        text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+        border: 5px solid #0a0;
+        border-bottom-color: rgba(0,0,0,0.35);
+	    background:linear-gradient(to bottom, #0a0 5%, #050 100%);
+	    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb0000', endColorstr='#6b002b',GradientType=0);
+	    background-color:#eb0000;
+        cursor: pointer;
+        outline: 0 ;
+        transition: background 0.4s, border 0.2s, margin 0.2s;
+    }
+
+    @keyframes pulse {
+        0% {
+            top: 0px;
+        }
+        100% {
+            top: 4px; 
+        } 
+    }
+
 </style>
 <script type="text/javascript">
 history.pushState(null, null, location.href);
@@ -101,15 +147,16 @@ history.pushState(null, null, location.href);
         document.onclick=reEnable
     }
 </script>
-
+<link rel="stylesheet" href="css/materialize.css">
 </head>
 <body>
 <div id="maindiv">
 <img src="img/1.png" width="100%"><br>
 <hr style="border: none;height: 5px;color: #333; background-color: #333;"><br><br>
-<a href="game.html"><button class="button">NEW GAME</button></a><br>
+<a href="game.html"><button class="button" style="        animation: pulse 1s infinite alternate;">PLAY</button></a><br>
 <a href="about.html"><button class="button">ABOUT</button></a>
 <br>
+
 <button class="buttonhighscore">HIGHSCORE : <span id="hs"> </span></button>
 <br><input type="Button" onclick="navigator.app.exitApp();" value='EXIT' class="button">
 <br><br><br>
