@@ -10,64 +10,9 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"
     />
 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/about.css" />
     <title>The Typing Game</title>
 
-    <style>
-        button {
-            outline: none;
-        }
-
-        * {
-            box-sizing: border-box;
-            user-select: none;
-        }
-
-        body {
-            background-color: #777;
-            text-align: center;
-            margin: 0;
-        }
-
-        #maindiv {
-            padding: 30px;
-            padding-top: 15px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, .8);
-            border-radius: 50px;
-            position: absolute;
-            right: 4%;
-            left: 4%;
-            top: 2%;
-            overlow: scroll;
-            border: 2px solid black;
-            min-height: 95%;
-            margin-bottom: 20px;
-        }
-    </style>
-
-    <script type="text/JavaScript">
-    function killCopy(e){
-        return false
-    }
-    function reEnable(){
-        return true
-    }
-    document.onselectstart=new Function ("return false")
-    if (window.sidebar){
-        document.onmousedown=killCopy
-        document.onclick=reEnable
-    }
-</script>
-
-<script type="text/javascript">
-    history.pushState(null, null, location.href);
-        window.onpopstate = function () {
-            // history.go(1);
-            window.location.replace('index.html');
-        };
-    </script>
-    
 
 </head>
 
@@ -108,11 +53,7 @@
                 </a>
             </div>
             <br>
-            <a href="index.html">
-                <button style="background-color:red;border:none;padding:15px;color:white;font-size:20px;font-family: Courier New;border-radius:50px;">Go Back</button>
-            </a>
-            <br>
-            <br>
+
         </div>
 
 
@@ -120,6 +61,28 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">app.initialize();</script>
+
+        <script type="text/JavaScript">
+            function killCopy(e){
+                return false
+            }
+            function reEnable(){
+                return true
+            }
+            document.onselectstart=new Function ("return false")
+            if (window.sidebar){
+                document.onmousedown=killCopy
+                document.onclick=reEnable
+            }
+        </script>
+        
+        <script type="text/javascript">
+            history.pushState(null, null, location.href);
+                window.onpopstate = function () {
+                    // history.go(1);
+                    window.location.replace('index.html');
+                };
+            </script>
 
     </div>
 </body>

@@ -10,144 +10,10 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
 
     <title>The Typing Game</title>
-<style>
 
-button{
-outline:none;
-}
-.button2 {
+    
 
-	box-shadow: 0px 1px 0px 0px #00090a;
-	background-color:#eb0000;
-	border:0px solid #fff;
-	display:inline-block;
-	color:#ffffff;
-	font-family:georgia;
-	font-size:15px;
-    text-decoration: none;    min-width: 80%;margin-top:20px;padding:15px;
-}
-
-
-
-.buttonhighscore2 {
-	box-shadow: 0px 1px 0px 0px #00090a;
-	background:linear-gradient(to bottom, #0a0 5%, #050 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb0000', endColorstr='#6b002b',GradientType=0);
-	background-color:#eb0000;
-	border-radius:20px;
-	border:0px solid #99f;
-	color:#ffffff;
-	font-family:georgia;
-	font-size:15px;
-    text-decoration: none;    min-width: 80%;margin-top:20px;padding:15px;position:relative;
-	animation: highscore 2s infinite;
-}
-
-
-
-
-
-input{
-box-shadow: 3px 3px 3px 3px #0007; border-radius:5px;
-}
-*{
-box-sizing:border-box;
-}
-body{
-text-align:center;
-animation:colors 5s infinite;
-margin:0;
-}
-#maindiv{
-padding:30px;padding-top:15px;text-align:center;background-color:rgba(0,10,50,.2);border-radius:20px;margin-right:5%;margin-left:5%;margin-top:2%;margin-bottom:2%;min-height:96%;
-overlow:scroll;border:0px solid black;
-}
-
-@keyframes colors{
-0% {background-color:#fee;}
-20% {background-color:#eff;}
-40% {background-color:#efe;}
-40% {background-color:#eee;}
-60% {background-color:#fef;}
-80% {background-color:#ffe;}
-100% {background-color:#fee;}
-}
-
-@keyframes highscore{
-0% { padding-right:1%;}
-50% {padding-left:1%;}
-100% {padding-right:1%;}
-}
-
-
-.button {
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-        position:relative;
-        font-size: 17px;
-        margin-top:20px;
-        padding: 9px 20px;
-        min-width: 80%;
-        border-radius: 10px;
-        color: white;
-        text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
-        border: 5px solid transparent;
-        border-bottom-color: rgba(0,0,0,0.35);
-        background: #e00;
-        cursor: pointer;
-        outline: 0 !important;
-        transition: background 0.4s, border 0.2s, margin 0.2s;
-    }
-
-.buttonhighscore {
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-        position:relative;
-        font-size: 17px;
-        margin-top:20px;
-        padding: 9px 20px;
-        min-width: 80%;
-        border-radius: 10px;
-        color: white;
-        text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
-        border: 5px solid #0a0;
-        border-bottom-color: rgba(0,0,0,0.35);
-	    background:linear-gradient(to bottom, #0a0 5%, #050 100%);
-	    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb0000', endColorstr='#6b002b',GradientType=0);
-	    background-color:#eb0000;
-        cursor: pointer;
-        outline: 0 ;
-        transition: background 0.4s, border 0.2s, margin 0.2s;
-    }
-
-    @keyframes pulse {
-        0% {
-            top: 0px;
-        }
-        100% {
-            top: 6px; 
-        } 
-    }
-
-</style>
-<script type="text/javascript">
-history.pushState(null, null, location.href);
-    window.onpopstate = function () {
-        navigator.app.exitApp();;
-    };
-</script>
-<script type="text/JavaScript">
-    function killCopy(e){
-        return false
-    }
-    function reEnable(){
-        return true
-    }
-    document.onselectstart=new Function ("return false")
-    if (window.sidebar){
-        document.onmousedown=killCopy
-        document.onclick=reEnable
-    }
-</script>
-<link rel="stylesheet" href="css/materialize.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <div id="maindiv">
@@ -172,6 +38,26 @@ history.pushState(null, null, location.href);
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">app.initialize();</script>
+
+    <script type="text/javascript">
+        history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                navigator.app.exitApp();;
+            };
+        </script>
+        <script type="text/JavaScript">
+            function killCopy(e){
+                return false
+            }
+            function reEnable(){
+                return true
+            }
+            document.onselectstart=new Function ("return false")
+            if (window.sidebar){
+                document.onmousedown=killCopy
+                document.onclick=reEnable
+            }
+        </script>
 	 
 	 </div>
 	</body>
