@@ -36,6 +36,9 @@
         },
         "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.steevjames"
         }
     },
     "dependent_plugins": {

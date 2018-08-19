@@ -1,132 +1,80 @@
 <html<!DOCTYPE html>
 
-<html>
+    <html>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"
+        />
 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>The Typing Game</title>
-<style>
-
-button{
-outline:none;
-}
-.button {
-
-	box-shadow: 0px 1px 0px 0px #00090a;
-	background-color:#eb0000;
-	border:0px solid #fff;
-	display:inline-block;
-	color:#ffffff;
-	font-family:georgia;
-	font-size:15px;
-    text-decoration: none;    min-width: 80%;margin-top:20px;padding:15px;
-}
+        <title>The Typing Game</title>
 
 
 
-.buttong {
-	box-shadow: 0px 1px 0px 0px #00090a;
-	background:linear-gradient(to bottom, #0a0 5%, #050 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb0000', endColorstr='#6b002b',GradientType=0);
-	background-color:#eb0000;
-	border-radius:20px;
-	border:0px solid #99f;
-	color:#ffffff;
-	font-family:georgia;
-	font-size:15px;
-    text-decoration: none;    min-width: 80%;margin-top:20px;padding:15px;position:relative;
-	animation: radius 2s infinite;
-}
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+
+    <body>
+        <div id="maindiv">
+            <img src="img/1.png" width="100%">
+            <br>
+            <hr>
+            <br>
+            <br>
+            <a href="game.html">
+                <button class="button" id="playbutton">PLAY</button>
+            </a>
+            <br>
+            <a href="about.html">
+                <button class="button">ABOUT</button>
+            </a>
+            <br>
+
+            <button class="buttonhighscore">HIGHSCORE :
+                <span id="hs"> </span>
+            </button>
+            <br>
+            <input type="Button" onclick="navigator.app.exitApp();" value='EXIT' class="button">
+            <br>
+            <br>
+            <br>
+
+
+            <script>
+                if (window.localStorage.getItem('highscore') == null) document.getElementById('hs').innerHTML = 0;
+                else document.getElementById('hs').innerHTML = window.localStorage.getItem('highscore');
 
 
 
+            </script>
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="js/index.js"></script>
+            <script type="text/javascript">app.initialize();</script>
 
+            <script type="text/javascript">
+                history.pushState(null, null, location.href);
+                window.onpopstate = function () {
+                    navigator.app.exitApp();;
+                };
+            </script>
+            <script type="text/JavaScript">
+            function killCopy(e){
+                return false
+            }
+            function reEnable(){
+                return true
+            }
+            document.onselectstart=new Function ("return false")
+            if (window.sidebar){
+                document.onmousedown=killCopy
+                document.onclick=reEnable
+            }
+        </script>
 
-input{
-box-shadow: 3px 3px 3px 3px #0007; border-radius:5px;
-}
-*{
-box-sizing:border-box;
-}
-body{
-text-align:center;
-animation:colors 5s infinite;
-margin:0;
-}
-#divv{
-padding:30px;padding-top:15px;text-align:center;background-color:rgba(0,10,50,.2);border-radius:20px;margin-right:5%;margin-left:5%;margin-top:2%;margin-bottom:2%;min-height:96%;
-overlow:scroll;border:0px solid black;
-}
+        </div>
+    </body>
 
-@keyframes colors{
-0% {background-color:#fee;}
-20% {background-color:#eff;}
-40% {background-color:#efe;}
-40% {background-color:#eee;}
-60% {background-color:#fef;}
-80% {background-color:#ffe;}
-100% {background-color:#fee;}
-}
-
-@keyframes radius{
-0% { padding-right:1%;}
-50% {padding-left:1%;}
-100% {padding-right:1%;}
-}
-
-
-</style>
-<script type="text/javascript">
-history.pushState(null, null, location.href);
-    window.onpopstate = function () {
-        navigator.app.exitApp();;
-    };
-</script>
-<script type="text/JavaScript">
-    function killCopy(e){
-        return false
-    }
-    function reEnable(){
-        return true
-    }
-    document.onselectstart=new Function ("return false")
-    if (window.sidebar){
-        document.onmousedown=killCopy
-        document.onclick=reEnable
-    }
-</script>
-
-</head>
-<body>
-<div id="divv">
-<img src="img/1.png" width="100%"><br>
-<hr style="border: none;height: 5px;color: #333; background-color: #333;"><br><br>
-<a href="game.html"><button class="button">NEW GAME</button></a><br>
-<a href="about.html"><button class="button">ABOUT</button></a>
-<br>
-<button class="buttong">HIGHSCORE : <span id="hs"> </span></button>
-<br><input type="Button" onclick="navigator.app.exitApp();" value='EXIT' class="button">
-<br><br><br>
-
-
-<script>
-	if(window.localStorage.getItem('highscore')==null) document.getElementById('hs').innerHTML=0;
-	else document.getElementById('hs').innerHTML=window.localStorage.getItem('highscore');
-	
-	 
-
-	</script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">app.initialize();</script>
-	 
-	 </div>
-	</body>
-
-</html>
+    </html>
