@@ -20,10 +20,12 @@
     <div id="maindiv">
 
         <img src="img/1.png" width="100%">
-        <hr style="border: none;height: 5px;color: #333; background-color: #333;">
+        <hr>
         <br>
-        <div style="font-size:15px;font-family:verdana;line-height:85%;">
-            <b>The Typing Game v1.4.8</b>
+        <div id="desc">
+            <b>
+                <div class="center">The Typing Game v1.4.8</div>
+            </b>
             <br>
             <p>
                 <b>*</b> This Game is
@@ -42,11 +44,11 @@
                 <br>
                 <br>
                 <b>*</b> Take the time to
-                <b>Rate the App 5 stars</b>. :)</p>
+                <b>Rate the App 5 stars</b>.</p>
             <br>
-            <div style="border-top:2px dashed red;padding:10px;">
+            <div class="bordertop">
                 <br>This Game is Created By
-                <a href="#" style="text-decoration:none;" onclick="window.open('https://steevjames.github.io/', '_system', 'location=yes');">
+                <a href="#" onclick="window.open('https://steevjames.github.io/', '_system', 'location=yes');">
                     <span style="color:#070;">
                         <b>Steev James.</b>
                     </span>
@@ -75,14 +77,14 @@
                 document.onclick=reEnable
             }
         </script>
-        
+
         <script type="text/javascript">
             history.pushState(null, null, location.href);
-                window.onpopstate = function () {
-                    // history.go(1);
-                    window.location.replace('index.html');
-                };
-            </script>
+            window.onpopstate = function () {
+                // history.go(1);
+                window.location.replace('index.html');
+            };
+        </script>
 
     </div>
 </body>

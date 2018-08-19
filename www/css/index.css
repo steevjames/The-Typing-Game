@@ -32,7 +32,9 @@ button{
     
     
     
-    
+    hr{
+        border: none;height: 5px;color: #333; background-color: #333;
+    }
     
     input{
     box-shadow: 3px 3px 3px 3px #0007; border-radius:5px;
@@ -44,6 +46,9 @@ button{
     text-align:center;
     animation:colors 5s infinite;
     margin:0;
+    }
+    #playbutton{
+        animation: pulse 1s infinite alternate;
     }
     #maindiv{
     padding:30px;padding-top:15px;text-align:center;background-color:rgba(0,10,50,.2);border-radius:20px;margin-right:5%;margin-left:5%;margin-top:2%;margin-bottom:2%;min-height:96%;
