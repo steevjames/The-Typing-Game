@@ -55,7 +55,8 @@ animation:anim 1s infinite;position:relative;transition:transform 2s;transition-
 <script type="text/javascript">
 history.pushState(null, null, location.href);
     window.onpopstate = function () {
-        history.go(1);
+        // history.go(1);
+        window.location.replace('index.html');
     };
 </script>	
 

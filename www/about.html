@@ -7,31 +7,46 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"
+    />
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>The Typing Game</title>
 
-<style>
-button{
-outline:none;
-}
-*{
-box-sizing:border-box; user-select: none;
-}
-body{
-background-color:#777;
-text-align:center;
-margin:0;
-}
-#maindiv{
-padding:30px;padding-top:15px;text-align:center;background-color:rgba(255,255,255,.8);border-radius:50px;position:absolute;right:4%;left:4%;top:2%;
-overlow:scroll;border:2px solid black;min-height:95%; margin-bottom:20px;
-}
+    <style>
+        button {
+            outline: none;
+        }
 
-</style>
+        * {
+            box-sizing: border-box;
+            user-select: none;
+        }
 
-<script type="text/JavaScript">
+        body {
+            background-color: #777;
+            text-align: center;
+            margin: 0;
+        }
+
+        #maindiv {
+            padding: 30px;
+            padding-top: 15px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .8);
+            border-radius: 50px;
+            position: absolute;
+            right: 4%;
+            left: 4%;
+            top: 2%;
+            overlow: scroll;
+            border: 2px solid black;
+            min-height: 95%;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <script type="text/JavaScript">
     function killCopy(e){
         return false
     }
@@ -45,33 +60,68 @@ overlow:scroll;border:2px solid black;min-height:95%; margin-bottom:20px;
     }
 </script>
 
+<script type="text/javascript">
+    history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            // history.go(1);
+            window.location.replace('index.html');
+        };
+    </script>
+    
+
 </head>
+
 <body>
-<div id="maindiv">
+    <div id="maindiv">
 
-<img src="img/1.png" width="100%">
-<hr style="border: none;height: 5px;color: #333; background-color: #333;"><br>
-<div style="font-size:15px;font-family:verdana;line-height:85%;">
-<b>The Typing Game v1.4.8</b>
-<br>
-<p><b>*</b> This Game is <b>low in size</b><br><br><b>*</b> It does not run in the background.<br><br><b>*</b> Requires <b>no permissions</b> <br><br>
-<b>*</b> There are <b>no ads</b>.
-<br><br><b>*</b> Take the time to <b>Rate the App 5 stars</b>. :)</p><br>
-<div style="border-top:2px dashed red;padding:10px;"><br>This Game is Created By 
-<a href="#" style="text-decoration:none;" onclick="window.open('https://steevjames.github.io/', '_system', 'location=yes');">
-<span style="color:#070;"><b>Steev James.</b></span>
-</a>
-</div>
-<br><a href="index.html"><button style="background-color:red;border:none;padding:15px;color:white;font-size:20px;font-family: Courier New;border-radius:50px;">Go Back</button></a><br><br>
-</div>
+        <img src="img/1.png" width="100%">
+        <hr style="border: none;height: 5px;color: #333; background-color: #333;">
+        <br>
+        <div style="font-size:15px;font-family:verdana;line-height:85%;">
+            <b>The Typing Game v1.4.8</b>
+            <br>
+            <p>
+                <b>*</b> This Game is
+                <b>low in size</b>
+                <br>
+                <br>
+                <b>*</b> It does not run in the background.
+                <br>
+                <br>
+                <b>*</b> Requires
+                <b>no permissions</b>
+                <br>
+                <br>
+                <b>*</b> There are
+                <b>no ads</b>.
+                <br>
+                <br>
+                <b>*</b> Take the time to
+                <b>Rate the App 5 stars</b>. :)</p>
+            <br>
+            <div style="border-top:2px dashed red;padding:10px;">
+                <br>This Game is Created By
+                <a href="#" style="text-decoration:none;" onclick="window.open('https://steevjames.github.io/', '_system', 'location=yes');">
+                    <span style="color:#070;">
+                        <b>Steev James.</b>
+                    </span>
+                </a>
+            </div>
+            <br>
+            <a href="index.html">
+                <button style="background-color:red;border:none;padding:15px;color:white;font-size:20px;font-family: Courier New;border-radius:50px;">Go Back</button>
+            </a>
+            <br>
+            <br>
+        </div>
 
 
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">app.initialize();</script>
-	 
-	 </div>
-	</body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">app.initialize();</script>
+
+    </div>
+</body>
 
 </html>

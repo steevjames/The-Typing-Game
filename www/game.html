@@ -79,7 +79,8 @@ position:fixed;bottom:0;left:0;right:0;top:80%;background-color:black;color:whit
 <script type="text/javascript">
 history.pushState(null, null, location.href);
     window.onpopstate = function () {
-        history.go(1);
+        // history.go(1);
+        window.location.replace('index.html');
     };
 </script>
 
@@ -124,8 +125,6 @@ $(document).keypress(
 <form name="f1" id='f1'>
 <input type="url" id="val" onkeypress=" " oninvalid="setCustomValidity(' ')" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="f2" placeholder='Type Here'></form>
 </div>
-<p id="test"></p>
-<a href="index.html"><button class="btn">Quit</button></a>
 
 
 
