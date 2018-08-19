@@ -96,6 +96,7 @@ function check() {
     }
 }
 
+setTimeout(document.getElementById('score').click(), 300);
 
 
 function start() {

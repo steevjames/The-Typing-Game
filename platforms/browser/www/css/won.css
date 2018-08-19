@@ -40,7 +40,7 @@ body {
 .score2 {
 	font-size: 30px;
 	color: white;
-	font-family: algerian;
+	font-family: algerian, verdana;
 	margin: 10px;
 }
 
@@ -64,11 +64,14 @@ body {
 }
 
 .navbuttons {
-	min-width: 40%;
+	min-width: 50%;
 	background-color: red;
 	border: none;
 	padding: 10px;
 	color: white;
 	font-size: 20px;
 	font-family: verdana;
+}
+a{
+	text-decoration: none;
 }
