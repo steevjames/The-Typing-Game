@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <widget xmlns = "http://www.w3.org/ns/widgets" 
-   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames" version = "1.6.0">
+   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames" version = "1.6.1">
    
    <name>The Typing Game</name>
    
@@ -16,9 +16,10 @@
    <preference name="android-minSdkVersion" value="19" />
    <preference name="android-targetSdkVersion" value="28" />
 
-   
-	<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-	<allow-intent href="*" />
+	
+		<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+  <allow-navigation href="*" />
+  <allow-intent href="*"/>
 
    
    <icon src = "img/logo.png" />
