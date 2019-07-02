@@ -18,7 +18,7 @@ body {
 	padding-top: 15px;
 	text-align: center;
 	background-color: rgba(255, 255, 255, .8);
-	border-radius: 50px;
+	border-radius: 40px;
 	position: absolute;
 	right: 4%;
 	left: 4%;
@@ -28,24 +28,47 @@ body {
 	min-height: 95%;
 	margin-bottom: 20px;
 }
+.imgdiv{
+	text-align: center;
+	padding: 0 2%;
+}
+.img{
+	width:100%;
+	max-width: 500px;
+}
 
 hr {
 	border: none;
-	height: 5px;
+	height:2px;
 	color: #333;
 	background-color: #333;
 }
 
 #desc {
-	font-size: 15px;
-	font-family: verdana;
-	line-height: 85%;
-	text-align: left;
+	font-size: 18px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	line-height: 130%;
+	text-align: center;
+}
+.donateimg{
+	width:50%;
+	max-width: 300px;
 }
 
 .bordertop {
 	border-top: 2px dashed red;
 	padding: 10px;
+}
+.options{
+	border:0;
+	border-radius:5px;
+	padding:15px 5px;
+	background-color:black;
+	color:white;
+	margin: 0;
+	margin-top: 15px;
+	width:47%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {

@@ -34,6 +34,11 @@ button {
 	animation: highscore 2s infinite;
 }
 
+.mainimg{
+	width:100%;
+	max-width:400px;
+}
+
 hr {
 	border: none;
 	height: 5px;
@@ -79,7 +84,7 @@ body {
 
 @keyframes colors {
 	0% {
-		background-color: #fee;
+		background-color: #fff;
 	}
 	20% {
 		background-color: #eff;
@@ -97,7 +102,7 @@ body {
 		background-color: #ffe;
 	}
 	100% {
-		background-color: #fee;
+		background-color: #fff;
 	}
 }
 
