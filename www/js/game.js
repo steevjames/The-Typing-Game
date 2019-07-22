@@ -66,7 +66,7 @@ function check() {
     if (time == 60 && document.f1.f2.value != "") start();
     if (time <= 0) {
         clearInterval(timer);
-        // clearInterval(check);
+        clearInterval(check);
         localStorage.setItem('score', score);
         if (Number(localStorage.getItem('highscore')) < score) {
             localStorage.setItem('highscore', score);
