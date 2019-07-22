@@ -41,7 +41,7 @@
             </div>
             <div id="cont">
                 <form name="f1" id='f1'>
-                    <input type="url" id="val" onkeypress=" " oninvalid="setCustomValidity(' ')" type="text" autocomplete="off" autocorrect="off"
+                    <input onkeydown="check()" onkeyup="check()" type="url" id="val" onkeypress=" " oninvalid="setCustomValidity(' ')" type="text" autocomplete="off" autocorrect="off"
                         autocapitalize="off" spellcheck="false" name="f2" placeholder='Type Here'/>
                 </form>
             </div>
@@ -51,7 +51,7 @@
             <script type="text/javascript" src="js/index.js"></script>
             <script type="text/javascript">app.initialize();</script>
             <script> resett();
-                check = setInterval(check, 20);
+                // check = setInterval(check, 20);
             </script>
 
 
