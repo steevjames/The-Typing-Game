@@ -8,7 +8,7 @@ button {
 }
 
 body {
-	background-color: #777;
+	background-color: #fff;
 	text-align: center;
 	margin: 0;
 }
@@ -24,7 +24,8 @@ body {
 	left: 4%;
 	top: 2%;
 	overlow: scroll;
-	border: 2px solid black;
+	/* border: 2px solid black; */
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
 	min-height: 95%;
 	margin-bottom: 20px;
 }
@@ -39,9 +40,9 @@ body {
 
 hr {
 	border: none;
-	height:2px;
-	color: #333;
-	background-color: #333;
+	height:1px;
+	color: #555;
+	background-color: #555;
 }
 
 #desc {
@@ -63,7 +64,7 @@ hr {
 	border:0;
 	border-radius:5px;
 	padding:15px 5px;
-	background-color:black;
+	background-color:#555;
 	color:white;
 	margin: 0;
 	margin-top: 15px;

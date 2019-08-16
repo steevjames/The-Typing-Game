@@ -17,7 +17,6 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/game.js"></script>
 
-
 </head>
 
 <body oncontextmenu="return false;">
@@ -27,10 +26,11 @@
 
     <div id="maindiv">
         <div id="game">
-            <b>The Typing Game</b>
+            <img src='img/title.png' class="titleimage"/>
         </div>
-        <div class="container">
-            <div id="time2">Time Left :
+        <div id="container">
+            <div id="time2"><img src='img/f.gif' class="clock"/>
+                &nbsp;&nbsp;&nbsp;
                 <span id="time">60</span>
             </div>
             <div id="score">Score : 0</div>
@@ -46,17 +46,15 @@
                 </form>
             </div>
 
-
-            <script type="text/javascript" src="cordova.js"></script>
-            <script type="text/javascript" src="js/index.js"></script>
-            <script type="text/javascript">app.initialize();</script>
-            <script> resett();
-                check = setInterval(check, 20);
-            </script>
-
-
         </div>
     </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">app.initialize();</script>
+    <script> resett();
+        check = setInterval(check, 20);
+    </script>
 
 </body>
 

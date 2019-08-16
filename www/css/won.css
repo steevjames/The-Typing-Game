@@ -24,31 +24,40 @@ body {
 }
 
 #maindiv {
-	min-height: 90%;
+	min-height: 94%;
 	padding: 30px;
 	padding-top: 15px;
 	text-align: center;
-	background-color: rgba(55, 55, 44, .7);
+	background-color: rgba(255, 255, 255, .85);
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
 	border-radius: 50px;
 	position: absolute;
-	right: 5%;
-	left: 5%;
-	top: 5%;
+	right: 3%;
+	left: 3%;
+	top: 3%;
 	overlow: hidden;
 }
 
 .score2 {
-	font-size: 30px;
-	color: white;
-	font-family: algerian, verdana;
+	font-size: 25px;
+	color: #555;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	margin: 10px;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.3);
+}
+
+#score{
+	font-size: 130%;
+}
+#highscore{
+	font-size: 130%;
 }
 
 #image {
-	animation: anim 1s infinite;
+	animation: anim 2s infinite;
 	position: relative;
 	transition: transform 2s;
-	transition-timing-function: linear;
+	/* transition-timing-function: linear; */
 }
 
 @keyframes anim {
@@ -64,13 +73,20 @@ body {
 }
 
 .navbuttons {
-	min-width: 50%;
-	background-color: red;
-	border: none;
-	padding: 10px;
-	color: white;
-	font-size: 20px;
-	font-family: verdana;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	position: relative;
+	font-size: 18px;
+	margin-top: 10px;
+	padding: 15px 20px;
+	min-width: 70%;
+	border-radius: 50px;
+	color: #555;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.3);
+	background: #fff;
+	border: 0px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	cursor: pointer;
+	outline: 0 !important;
 }
 a{
 	text-decoration: none;
