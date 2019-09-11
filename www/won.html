@@ -16,6 +16,17 @@
     <title>Words</title>
 
 
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            document.addEventListener("backbutton", function (e) {
+                window.location.replace('index.html');
+            }, false);
+        }
+    </script>
+
+
 </head>
 
 <body>
@@ -23,7 +34,7 @@
     <div id="overlay"></div>
 
     <div id="maindiv">
-        <img src="img/trophy.png" height='200px' id="image">
+        <img src="img/trophy.png" height='180px' id="image">
         <br>
         <p class="score2">
             Your Score :

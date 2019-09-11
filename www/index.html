@@ -16,12 +16,24 @@
 
 
         <link rel="stylesheet" href="css/index.css">
+
+
+        <script type="text/javascript">
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            function onDeviceReady() {
+                document.addEventListener("backbutton", function (e) {
+                    navigator.app.exitApp();
+                }, false);
+            }
+        </script>
+
     </head>
 
     <body oncontextmenu="return false;">
         <div id="maindiv">
-                <br>
-                <br>
+            <br>
+            <br>
             <img src="img/img.png" class="mainimg">
             <br>
             <br>

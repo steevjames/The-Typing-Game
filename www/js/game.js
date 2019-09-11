@@ -6,7 +6,6 @@ window.onpopstate = function () {
 };
 
 
-
 //Disable Enter Key on Input Field
 function stopRKey(evt) {
     var evt = (evt) ? evt : ((event) ? event : null);

@@ -7,16 +7,24 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"
-    />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
 
     <link rel="stylesheet" type="text/css" href="css/won.css" />
     <title>Words</title>
 
 
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
 
-
+        function onDeviceReady() {
+            document.addEventListener("backbutton", function (e) {
+                window.location.replace('index.html');
+            }, false);
+        }
+    </script>
 
 
 </head>
@@ -26,15 +34,15 @@
     <div id="overlay"></div>
 
     <div id="maindiv">
-        <img src="img/trophy.png" height='200px' id="image">
+        <img src="img/trophy.png" height='180px' id="image">
         <br>
         <p class="score2">
-            <b>Your Score : </b>
-            <span id='score'> </span>
+            Your Score :
+            <b><span id='score'> </span></b>
         </p>
-        <p class="score2" style="font-size:27px;">
-            <b>High Score : </b>
-            <span id="highscore"> </span>
+        <p class="score2" >
+            High Score :
+            <b><span id="highscore"> </span></b>
         </p>
         <br>
         <a href="game.html">
@@ -45,20 +53,23 @@
         <a href="index.html">
             <button class="navbuttons">Main Menu</button>
         </a>
-        <script>
-
-            document.getElementById('highscore').innerHTML = localStorage.getItem('highscore');;
-
-            document.getElementById('score').innerHTML = localStorage.getItem('score');
-            window.setTimeout(enableclick, 1500);
-            function enableclick() {
-                document.getElementById('overlay').style.display = 'none';
-            }
-        </script>
-
 
     </div>
+
+
 </body>
+
+
+<script>
+
+    document.getElementById('highscore').innerHTML = localStorage.getItem('highscore');;
+
+    document.getElementById('score').innerHTML = localStorage.getItem('score');
+    window.setTimeout(enableclick, 1500);
+    function enableclick() {
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>

@@ -6,7 +6,6 @@ window.onpopstate = function () {
 };
 
 
-
 //Disable Enter Key on Input Field
 function stopRKey(evt) {
     var evt = (evt) ? evt : ((event) ? event : null);
@@ -53,8 +52,8 @@ function timer() {
     if (time == 45) { document.getElementById('maindiv').style.background = 'linear-gradient(-90deg, #fbb, #fff' }
     if (time == 10) {
         document.getElementById('maindiv').style.background = 'linear-gradient(-90deg, #fff, #f55';
-        document.getElementById('time2').style.backgroundColor = 'rgba(0,0,0,.2)';
-        document.getElementById('time2').style.color = 'white';
+        // document.getElementById('time2').style.backgroundColor = 'rgba(0,0,0,.2)';
+        document.getElementById('time').style.color = 'white';
     }
     document.getElementById('time').innerHTML = time;
 }
